@@ -6,7 +6,8 @@ name = input()
 
 seceretNumber = random.randint(1, 20)
 print('Hey, ' + name + ', I am thinking of a number between 1 and 20. Can you guess it?')
-
+# Show number onscreen to verify.
+#    print('DEBUG the seceret number is ' + str(seceretNumber))
 #asking user to guess numner
 for numberGuesses in range(1, 7):
 	print('Make a guess.')
