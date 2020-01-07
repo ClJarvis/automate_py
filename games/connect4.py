@@ -75,6 +75,11 @@ while not game_over:
 			row = get_next_open_row(board, col)
 			drop_piece(board, row, col, 2)
 
+			if winning_move(board, 2):
+				print("Player 2 wins!!")
+				game_over = True
+				
+
 	print_board(board)
 	turn += 1
 	turn = turn % 2
