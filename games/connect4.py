@@ -1,5 +1,6 @@
 import numpy as np
 import pygame
+import sys
 
 ROW_COUNT = 6
 COLUMN_COUNT = 7
@@ -48,6 +49,9 @@ def winning_move(board, piece):
 			if board[r][c] ==piece and board[r-1][c+1] == piece and board[r-2][c+2] == piece and board[r-3][c+3] == piece:
 				return True
 
+
+def draw_board(board):
+	pass
 #board = create_board()
 #print(board)
 
@@ -67,6 +71,9 @@ size = (width, height)
 screen = pygame.display.set_mode(size)
 
 while not game_over:
+	for event in pygame.event.get():
+		if event.type == pygame.QUIT:
+			sys.exit()
 	#player 1 input
 	if turn == 0:
 		col = int(input("Player 1 make your selection (0-6):"))
